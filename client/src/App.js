@@ -6,8 +6,6 @@ var peer = new Peer({ host: 'localhost', port: 9000, path: '/myapp', secure: fal
 // ค่า default สำหรับ conn
 var conn = peer.connect();
 
-
-
 function App() {
 
   const [id, setId] = useState(0);
@@ -20,7 +18,6 @@ function App() {
 
 
   useEffect(() => {
-
     // เชื่อมต่อกับ server เพื่อรับ ข้อมูล id ของตัวเอง
     peer.on('open', function (id) {
       console.log('My peer ID is: ' + id);
